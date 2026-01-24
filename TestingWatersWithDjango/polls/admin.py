@@ -3,7 +3,7 @@ from django.contrib import admin
 # Register your models here.
 from .models import Choice, Question
 
-class ChoiceInLine(admin.StackedInline):
+class ChoiceInLine(admin.TabularInline):
     model = Choice
     extra = 3
 
