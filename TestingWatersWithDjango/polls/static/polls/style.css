@@ -1,5 +1,10 @@
 body {
-    background: white url('images/background.jpg') no-repeat cente fixed;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-color: white;
 }
 
 li {
@@ -9,6 +14,6 @@ li {
 }
 
 li a {
-    color: rgb(206, 62, 163);
+    color: rgb(245, 232, 209);
     margin: auto;
 }
