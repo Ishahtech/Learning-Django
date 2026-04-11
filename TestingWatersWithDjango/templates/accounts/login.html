@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
+<script>
+    function togglePassword(fieldId) {
+    const field = document.getElementById(fieldId);
+
+    if (field.type === "password") {
+        field.type = "text";
+    } else {
+        field.type = "password";
+    }
+}
+</script>
+
 <body>
 
 <div class="container">
@@ -30,7 +42,7 @@
         <div class="form-group password-wrapper">
             <label>Password</label>
             {{ form.password }}
-            <span class="toggle-password" onclick="togglePassword('id_password1')">
+            <span class="toggle-password" onclick="togglePassword('id_password')">
                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" viewBox="0 0 24 24">
