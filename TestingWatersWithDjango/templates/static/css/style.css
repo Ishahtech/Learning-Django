@@ -62,3 +62,24 @@ button {
 button:hover {
     background: #1f56c0;
 }
+
+.error-box {
+    background: #ffe6e6;
+    color: #a30000;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 38px;
+    cursor: pointer;
+    font-size: 16px;
+}
