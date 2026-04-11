@@ -1,4 +1,45 @@
-<h1>{{ question.question_text }}</h1> 
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vote</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>{{ question.question_text }}</h2>
+
+    {% if error_message %}
+        <div class="error-box">{{ error_message }}</div>
+    {% endif %}
+
+    <form action="{% url 'polls:vote' question.id %}" method="post">
+        {% csrf_token %}
+
+        {% for choice in question.choice_set.all %}
+            <div class="form-group">
+                <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+                <label for="choice{{ forloop.counter }}">
+                    {{ choice.choice_text }}
+                </label>
+            </div>
+        {% endfor %}
+
+        <button type="submit">Vote</button>
+    </form>
+
+</div>
+
+</body>
+</html>
+
+
+
+<!-- <h1>{{ question.question_text }}</h1> 
 <ul>
 {% for choice in question.choice_set.all %}
     <li>{{ choice.choice_text }}</li>
@@ -17,4 +58,4 @@
     {% endfor %}
 </fieldset>
 <input type="submit" value="Vote">
-</form>
+</form> -->
