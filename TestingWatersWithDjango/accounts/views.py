@@ -20,4 +20,6 @@ def register(request):
 
     return render(request, "accounts/register.html", {"form": form})
 
+def home(request):
+    return render(request, "accounts/home.html")
 # Create your views here.
