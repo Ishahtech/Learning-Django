@@ -81,5 +81,7 @@ button:hover {
     right: 10px;
     top: 38px;
     cursor: pointer;
-    font-size: 16px;
+    color: #666;
+    display: flex;
+    align-items: center;
 }
