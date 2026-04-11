@@ -8,11 +8,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome 🎉 </h1>
+        <h1>Welcome {{ request.user.username }} 🎉 </h1>
 
         <p>You are logged in successfully!</p>
 
-        <a href="/register/">Register another user</a>
+        <a href="/logout/">logout</a>
     </div>
 </body>
 </html>
